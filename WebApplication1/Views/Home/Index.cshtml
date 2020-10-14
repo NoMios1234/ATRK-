@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Options</title>
+</head>
+<body>
+    <h3>Songs Settings</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Duration</td>
+                <td>Size</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var a in ViewBag.Songs)
+                {
+                    <tr>
+                        <td>@a.Name</td>
+                        <td>@a.Duration</td>
+                        <td>@a.Size</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <h3>Sound Settings</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Volume</td>
+                <td>Mode</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var a in ViewBag.Sounds)
+                {
+                    <tr>
+                        <td>@a.Volume</td>
+                        <td>@a.Mode</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <h3>Wi-Fi Settings</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Name Mode</td>
+                <td>Mode</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var a in ViewBag.Settings)
+                {
+                    <tr>
+                        <td>@a.Name</td>
+                        <td>@a.Mode</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
